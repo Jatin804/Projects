@@ -24,6 +24,5 @@ urlpatterns = [
     path('SolarSys', include("Space.urls")),
     path('FAQs', include("Space.urls")),
     path('contact', include("Space.urls")),
-    # path('login', include("Space.urls")),
     
 ]
