@@ -18,11 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path('', include("Space.urls")),
     path('Universe', include("Space.urls")),
     path('SolarSys', include("Space.urls")),
     path('FAQs', include("Space.urls")),
-    path('contact', include("Space.urls")),
+    path('review', include("Space.urls")),
     
 ]
