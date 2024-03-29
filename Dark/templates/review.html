@@ -5,37 +5,40 @@
 {% block body %}
 
 <div class="container-fluid px-0 mb-3">
-    <img src="https://source.unsplash.com/1200x400/?phone,contact" class="d-block w-100 mx-0" alt="...">
+    <img src="/static/img/contact-img.jpeg" class="d-block w-100 mx-0" alt="...">
 </div>
-<div class="container py-4 shadow-lg p-3 mb-5 bg-body rounded">
-    <h1 class="text-center">Contact Us</h1>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Leave a Review :]</h2>
     <form method="post" action="/review">
-    {% csrf_token %}  
-    {% comment %} TO CONFORM THAT WEB DATA IS SUMBITING THROUNG THIS WEB PAGE ONLY  {% endcomment %}
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your Name" required>
-        </div>
+        {% csrf_token %}
+      <div class="form-group" style="margin-top: 10px;">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+      </div>
 
-        <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="phone" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number" required>
-        </div>      
-        
-        <div class="form-group">
-            <label for="desc">Tell me about what you want to contact me for...</label>
-            <textarea class="form-control" id="desc" rows="3" name="desc" required></textarea>
-        </div>
-        <div class="form-group">
-            <button class="btn btn-primary" type="submit">Submit</button>
-        </div>
+      <div class="form-group" style="margin-top: 10px;">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group" style="margin-top: 10px;">
+        <label for="phone">Rating:</label>
+        <select class="form-control" id="phone" name="phone" required>
+          <option>5 stars</option>
+          <option>4 stars</option>
+          <option>3 stars</option>
+          <option>2 stars</option>
+          <option>1 star</option>
+        </select>
+      </div>
+
+      <div class="form-group" style="margin-top: 10px;">
+        <label for="desc">Review:</label>
+        <textarea class="form-control" id="desc" rows="3" name="desc" placeholder="Write your review" required></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Submit</button>
     </form>
-
 </div>
 
 {% endblock body %}
